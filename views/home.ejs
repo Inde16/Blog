@@ -6,6 +6,6 @@
 <% postToHome.forEach(function(posts){ %>
 
 <h1><%= posts.title %></h1>
-<p><%= posts.content %></p>
+<p><%= posts.content.substring(0 , 100) + "..." %><a href="/posts/<%= posts.title %>">Read More</a></p>
 
 <% }); %> <%- include("partials/footer.ejs"); -%>
